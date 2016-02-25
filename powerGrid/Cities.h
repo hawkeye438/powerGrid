@@ -9,7 +9,6 @@
 #define CITIES_H_
 
 #include "PlayerAssets.h"
-
 namespace jjsPowerGrid {
 
 class Cities: public PlayerAssets {

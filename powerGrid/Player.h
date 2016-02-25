@@ -8,6 +8,7 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 #include <iostream>
+#include "PlayerAssets.h"
 using namespace std;
 
 namespace jjsPowerGrid {

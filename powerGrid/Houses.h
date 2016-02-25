@@ -15,7 +15,7 @@ using namespace std;
 
 namespace jjsPowerGrid {
 
-class Houses:public PlayerAssets {
+class Houses: public PlayerAssets {
 private:
 	string color;
 public:
