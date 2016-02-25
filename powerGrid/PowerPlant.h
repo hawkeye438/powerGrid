@@ -18,6 +18,7 @@ private:
 	int rating;
 	int expense;
 	int powerGeneration;
+	int quantity;
 
 public:
 	PowerPlant();

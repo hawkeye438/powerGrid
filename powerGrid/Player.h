@@ -26,6 +26,8 @@ public:
 
 	void setPlayerColor(string color);
 	string getPlayerColor();
+
+	void playerInfo();
 };
 
 } /* namespace jjsPowerGrid */

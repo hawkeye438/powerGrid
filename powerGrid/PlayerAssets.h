@@ -36,7 +36,7 @@ public:
 	void setQuantity(int x);
 	void addQuantity(int x);
 	void reduceQuantity(int x);
-	string info();
+	string assetInfo();
 };
 
 } /* namespace jjsPowerGrid */

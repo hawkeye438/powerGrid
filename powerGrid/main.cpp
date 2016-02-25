@@ -13,75 +13,57 @@ namespace jjsPowerGrid {
 
 int main() {
 
-	string name = "";
-	string colorChoice = "";
-	string colors[]={"red", "yellow", "green", "blue", "purple", "black"};
-	bool goodColor = true;
-	int numberPlayers = 0;
+	string name = "JohnDoe";
+	unsigned int colorChoice = "";
+	string colors[] = { "red", "yellow", "green", "blue", "purple", "black" };
+	bool validColor = false;
+	int numberOfPlayers = 0;
+	vector<Player> players(numberOfPlayers);
 
-	cout<<"How many players: (2)";
-	cin>>numberPlayers;
+	cout << "How many players: (2)";
+	cin >> numberOfPlayers;
 
-	vector<Player> players(numberPlayers);
-
-	for(int i = 0; i < numberPlayers; i++){
-		Player *player = new Player();
-		players[i] = *player;
-	}
-
-	for(unsigned int j = 0; j < players.size(); j++){
-		cout<<"Please enter your name (player number "<<j+1<<" )"<<endl;
-		cin>>name;
-		players[j].setPlayerName(name);
-		cout<<"What color do you want to use? "<<endl;
-		cout<<"(red, yellow, green, blue, purple, black)"<<endl;
-		cin>>colorChoice;
-		colorChoice = LowerCase(colorChoice);
-		cout<<colorChoice<<endl;
-
-		do{
-			for(int i = 0; i < 6; i++){
-				if(j > 0){
-					if(colors[i]!=colorChoice || players[j-1].getHouseColor()==colorChoice){
-										goodColor = false;
-									}else{
-										goodColor = true;
-										players[j].setHouseColor(colorChoice);
-										break;
-									}
-				}else{
-					if(colors[i]!=colorChoice){
-									goodColor = false;
-								}else{
-									goodColor = true;
-									players[j].setHouseColor(colorChoice);
-									break;
-								}
-				}
-
+	for (int j = 0; j < numberOfPlayers; j++) {
+			cout << "Please enter your name (player number " << j + 1 << " )"
+					<< endl;
+			cin >> name;
+			cout << "Choose your playing color? " << endl;
+			cout << "(1 for red,2 for yellow,3 for green,4 for blue,5 for purple,6 for black)" << endl;
+			cin >> colorChoice;
+			do
+			{
+				validColor = false;
+				switch(colorChoice)
+							{
+							case 1:
+							case 2:
+							case 3:
+							case 4:
+							case 5:
+							case 6:
+								validColor = true;
+								cout <<"the Color you picked is: " +colors[colorChoice-1] << endl;
+								break;
+							default:
+								cout <<"The color you chose is invalid, Please type a valid number from the list"<<endl;
+								cout << "(1 for red,2 for yellow,3 for green,4 for blue,5 for purple,6 for black)" << endl;
+								cin >> colorChoice;
+							}
 			}
+			while(validColor == false);
 
-			if(!goodColor){
-				cout<<"Please enter a valid color."<<endl;
-				cin>>colorChoice;
-			}
-		}while(!goodColor);
-	}
 
-	cout<<"\n\nThe list of players are: "<<endl;
-	for(unsigned int i =0; i < players.size(); i++){
-		cout<<"\n\nPlayer number "<<i+1<<": "<<players[0].getPlayerName()<<endl;
-		cout<<"The color of "<<players[i].getPlayerName()<<"'s houses is: "<<players[i].getHouseColor()<<"."<<endl;
-		cout<<players[i].getPlayerName()<<" has "<<players[i].getMoney()<<" Electros, ";
-		cout<<players[i].getNumberHouses()<<" houses, "<<players[i].getNumberPowerPlants()<<" power plants, and "<<players[i].getNumberCities()<<" cities."<<endl;
-		cout<<players[i].getPlayerName()<<" has the following resources: "<<players[i].getCoal()<<" coal, "<<players[i].getGarbage()<<" garbage, "<<players[i].getOil()<<" oil, and "<<players[i].getUranium()<<" uranium."<<endl;
+		Player *player = new Player(name, colorChoice);
+		players[j] = *player;
 
 	}
 
-	return 0;
+	cout << "\n\nThe list of players are: " << endl;
+	for (unsigned int i = 0; i < players.size(); i++) {
+		cout<<players[i].playerInfo()<<endl;
+
+	}
 
 
-
-
-return 0;
-} /* namespace jjsPowerGrid */
+}
+ /* namespace jjsPowerGrid */
