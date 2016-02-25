@@ -9,10 +9,13 @@
 #define HOUSES_H_
 
 #include "PlayerAssets.h"
+#include <iostream>
+#include <string>
+using namespace std;
 
 namespace jjsPowerGrid {
 
-class Houses: public PlayerAssets {
+class Houses:public PlayerAssets {
 private:
 	string color;
 public:

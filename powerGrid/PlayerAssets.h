@@ -23,7 +23,7 @@ class PlayerAssets {
 private:
 	int quantityOfItem;
 	Money playersMoney;
-	Houses playersHouses;
+	Houses playersHouses(color);
 	Cities playersCities;
 	PowerPlant playersPowerPlants;
 	NaturalRessources PlayersRessources;
