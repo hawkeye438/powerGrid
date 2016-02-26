@@ -4,7 +4,7 @@
  *  Created on: Feb 24, 2016
  *      Author: jordan S
  */
-
+#include<string>
 #include "PowerPlant.h"
 
 using namespace jjsPowerGrid;
@@ -46,11 +46,11 @@ void PowerPlant::setPlantPowerProd(int x) {
 	powerGeneration = x;
 }
 
-void PowerPlant::setPlantClass(string typeOfPlant) {
+void PowerPlant::setPlantClass(std::string typeOfPlant) {
 	type = typeOfPlant;
 }
 
-string PowerPlant::getPlantClass(){
+std::string PowerPlant::getPlantClass(){
 	return type;
 }
 

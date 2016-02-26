@@ -8,9 +8,6 @@
 #ifndef POWERPLANT_H_
 #define POWERPLANT_H_
 
-#include<string>
-#include "PlayerAssets.h"
-
 
 namespace jjsPowerGrid {
 
@@ -24,7 +21,7 @@ private:
 
 public:
 	PowerPlant();
-	virtual ~PowerPlant();
+	~PowerPlant();
 
 	void setPowerPlantQty(int x);
 	void setPlantExpense(int x);

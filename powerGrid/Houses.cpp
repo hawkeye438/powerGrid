@@ -23,7 +23,7 @@ void Houses::setHouseColor(string color)
 	this->color = color;
 }
 void Houses::setHousesQty(int x){
-	houseQuantity = x;
+	houseQuantity += x;
 }
 string Houses::getHouseColor()
 {

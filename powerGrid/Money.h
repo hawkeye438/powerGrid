@@ -8,14 +8,16 @@
 #ifndef MONEY_H_
 #define MONEY_H_
 
-#include "PlayerAssets.h"
-
 namespace jjsPowerGrid {
 
 class Money{
+private:
+	int moneyQuantity;
 public:
 	Money();
 	~Money();
+	void setMoneyQty(int x);
+	void setMoneyQty();
 };
 
 } /* namespace jjsPowerGrid */

@@ -9,9 +9,12 @@
 #include "PlayerAssets.h"
 namespace jjsPowerGrid {
 
-Player::Player(string playerName, string playerColor) {
- this->playerName = playerName;
-// ressources.setPlayerColor(playerColor);
+//Player::Player(string playerName, string playerColor) {
+// this->playerName = playerName;
+//// ressources.setPlayerColor(playerColor);
+//}
+Player::Player(){
+
 }
 
 Player::~Player() {
@@ -36,6 +39,8 @@ string Player::getPlayerColor(){
 void Player::playerInfo(){
 //	cout<<"welcome: "<<this->playerName<<endl<<", your current assets are: "
 //			<<endl<<this->playerInfo<<endl;
+	cout<<"welcome: "<<getPlayerName()<<endl<<", your current assets are: "
+				<<endl;
 }
 
 }

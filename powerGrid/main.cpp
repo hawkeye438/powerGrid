@@ -7,9 +7,9 @@
 
 #include <iostream>
 #include <vector>
-#include "Player.h"
+#include"PlayerAssets.h"
 using namespace std;
-namespace jjsPowerGrid {
+using namespace jjsPowerGrid;
 
 int main() {
 
@@ -18,12 +18,18 @@ int main() {
 	string colors[] = { "red", "yellow", "green", "blue", "purple", "black" };
 	bool validColor = false;
 	int numberOfPlayers = 0;
-	vector<Player> players(numberOfPlayers);
+
 
 	cout << "How many players: (2)";
 	cin >> numberOfPlayers;
 
-	for (int j = 0; j < numberOfPlayers; j++) {
+	vector<Player> players(numberOfPlayers);
+
+	for(int i = 0; i < numberOfPlayers; i++){
+			Player *player = new Player();
+			players[i] = *player;
+		}
+	for (int j = 0; j < players.size(); j++) {
 			cout << "Please enter your name (player number " << j + 1 << " )"
 					<< endl;
 			cin >> name;
@@ -53,14 +59,15 @@ int main() {
 			while(validColor == false);
 
 
-		Player *player = new Player(name, colorChoice);
-		players[j] = *player;
+		players[j].setPlayerName(name);
+		players[j].setPlayerColor(colors[colorChoice]);
 
 	}
 
 	cout << "\n\nThe list of players are: " << endl;
 	for (unsigned int i = 0; i < players.size(); i++) {
-		cout<<players[i].playerInfo()<<endl;
+		cout<<players[i].getPlayerName()<<endl;
+		cout<<players[i].getPlayerColor()<<endl;
 
 	}
 

@@ -10,12 +10,18 @@
 namespace jjsPowerGrid {
 
 Money::Money() {
-//	setQuantity(50);
+	setMoneyQty(50);
 
 }
 
 Money::~Money() {
 	// TODO Auto-generated destructor stub
+}
+void Money::setMoneyQty(int x){
+	moneyQuantity += x;
+}
+void Money::setMoneyQty(){
+	moneyQuantity = 0;
 }
 
 } /* namespace jjsPowerGrid */

@@ -11,7 +11,7 @@ using namespace jjsPowerGrid;
 
 PlayerAssets::PlayerAssets(){
 	setHousesQty(0);
-	setHouseColor(color);
+
 }
 
 PlayerAssets::~PlayerAssets() {
@@ -22,19 +22,12 @@ int PlayerAssets::getQuantity() {
 	return this->quantityOfItem;
 }
 
-void PowerPlant::setPowerPlantQty(int x) {
-	quantity = x;
-}
-
-
-
 void PlayerAssets::reduceQuantity(int x) {
 	quantityOfItem -= x;
 }
 
 string PlayerAssets::assetInfo(){
-	return "Cities: "+getQuantity()+", Houses: "+getQuantity()
-			+", Money: "+getQuantity();
+	return "Cities: , Houses: , Money: ";
 }
 
 /* namespace jjsPowerGrid */

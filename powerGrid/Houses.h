@@ -9,7 +9,6 @@
 #define HOUSES_H_
 
 #include <iostream>
-#include "PlayerAssets.h"
 
 using namespace std;
 
@@ -21,7 +20,7 @@ private:
 	int houseQuantity;
 public:
 	Houses();
-	virtual ~Houses();
+	 ~Houses();
 
 	void setHouseColor(string color);
 	void setHousesQty(int x);

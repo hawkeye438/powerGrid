@@ -14,11 +14,12 @@
 #include "Cities.h"
 #include "NaturalRessources.h"
 #include "PowerPlant.h"
+#include "Player.h"
 using namespace std;
 
 using namespace jjsPowerGrid;
 
-class PlayerAssets: public Houses, public NaturalRessources, public Cities, public PowerPlant, public Money{
+class PlayerAssets: public Cities, public Houses, public Money, public PowerPlant, public Player{
 
 private:
 	int quantityOfItem;
@@ -31,7 +32,7 @@ private:
 public:
 	PlayerAssets(string color);
 	PlayerAssets();
-	virtual ~PlayerAssets();
+	 ~PlayerAssets();
 
 	int getQuantity();
 	void setQuantity(int x);

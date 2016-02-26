@@ -8,7 +8,7 @@
 #ifndef CITIES_H_
 #define CITIES_H_
 
-#include "PlayerAssets.h"
+//#include "PlayerAssets.h"
 
 namespace jjsPowerGrid {
 
@@ -20,6 +20,7 @@ public:
 	 ~Cities();
 	void setCitiesQty(int x);
 	void setCitiesQty();
+	int getCitiesQty();
 };
 
 } /* namespace jjsPowerGrid */
