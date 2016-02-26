@@ -7,10 +7,10 @@
 
 #include "Houses.h"
 
-namespace jjsPowerGrid {
+using namespace jjsPowerGrid;
 
-Houses::Houses(string color) {
-	setQuantity(22);
+Houses::Houses(){
+	setHousesQty(22);
 	setHouseColor(color);
 }
 
@@ -22,10 +22,12 @@ void Houses::setHouseColor(string color)
 {
 	this->color = color;
 }
-
+void Houses::setHousesQty(int x){
+	houseQuantity = x;
+}
 string Houses::getHouseColor()
 {
 	return this->color;
 }
 
-} /* namespace jjsPowerGrid */
+/* namespace jjsPowerGrid */

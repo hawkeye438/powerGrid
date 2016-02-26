@@ -8,13 +8,15 @@
 #ifndef POWERPLANT_H_
 #define POWERPLANT_H_
 
+#include<string>
 #include "PlayerAssets.h"
+
 
 namespace jjsPowerGrid {
 
-class PowerPlant: public PlayerAssets {
+class PowerPlant{
 private:
-	string type;
+	std::string type;
 	int rating;
 	int expense;
 	int powerGeneration;
@@ -24,15 +26,15 @@ public:
 	PowerPlant();
 	virtual ~PowerPlant();
 
+	void setPowerPlantQty(int x);
 	void setPlantExpense(int x);
 	int getPlantExpense();
 	void setPlantRating(int x);
 	int getPlantRating();
 	int getPlantPowerProd();
 	void setPlantPowerProd(int x);
-	void setPlantClass(string typeOfPlant);
-	string getPlantClass();
-
+	void setPlantClass(std::string typeOfPlant);
+	std::string getPlantClass();
 };
 
 } /* namespace jjsPowerGrid */

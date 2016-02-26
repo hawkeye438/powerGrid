@@ -8,11 +8,12 @@
 #ifndef NATURALRESSOURCES_H_
 #define NATURALRESSOURCES_H_
 
-#include "PlayerAssets.h"
+//#include "PlayerAssets.h"
+class PlayerAsserts;
 
 namespace jjsPowerGrid {
 
-class NaturalRessources: public PlayerAssets {
+class NaturalRessources{
 private:
 	int coal;
 	int oil;
@@ -20,7 +21,7 @@ private:
 	int garbage;
 public:
 	NaturalRessources();
-	virtual ~NaturalRessources();
+	 ~NaturalRessources();
 
 	int getCoal();
 

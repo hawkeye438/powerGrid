@@ -10,7 +10,7 @@
 namespace jjsPowerGrid {
 
 Money::Money() {
-	setQuantity(50);
+//	setQuantity(50);
 
 }
 

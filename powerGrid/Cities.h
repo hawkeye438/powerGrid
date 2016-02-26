@@ -9,12 +9,17 @@
 #define CITIES_H_
 
 #include "PlayerAssets.h"
+
 namespace jjsPowerGrid {
 
-class Cities: public PlayerAssets {
+class Cities {
+private:
+	int cityQuantity;
 public:
 	Cities();
-	virtual ~Cities();
+	 ~Cities();
+	void setCitiesQty(int x);
+	void setCitiesQty();
 };
 
 } /* namespace jjsPowerGrid */

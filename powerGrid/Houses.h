@@ -8,21 +8,23 @@
 #ifndef HOUSES_H_
 #define HOUSES_H_
 
-#include "PlayerAssets.h"
 #include <iostream>
-#include <string>
+#include "PlayerAssets.h"
+
 using namespace std;
 
 namespace jjsPowerGrid {
 
-class Houses: public PlayerAssets {
+class Houses{
 private:
-	string color;
+	std::string color;
+	int houseQuantity;
 public:
-	Houses(string color);
+	Houses();
 	virtual ~Houses();
 
 	void setHouseColor(string color);
+	void setHousesQty(int x);
 	string getHouseColor();
 
 };

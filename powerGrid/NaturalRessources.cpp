@@ -7,9 +7,9 @@
 
 #include "NaturalRessources.h"
 
-namespace jjsPowerGrid {
+using namespace jjsPowerGrid;
 
-NaturalRessources::NaturalRessources() {
+NaturalRessources::NaturalRessources(){
 	setCoal(0);
 	setOil(0);
 	setGarbage(0);
@@ -52,4 +52,4 @@ void NaturalRessources::setUranium(int uranium) {
 	this->uranium = uranium;
 }
 
-} /* namespace jjsPowerGrid */
+ /* namespace jjsPowerGrid */

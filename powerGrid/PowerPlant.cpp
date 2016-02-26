@@ -7,10 +7,10 @@
 
 #include "PowerPlant.h"
 
-namespace jjsPowerGrid {
+using namespace jjsPowerGrid;
 
 PowerPlant::PowerPlant() {
-	setQuantity(0);
+	setPowerPlantQty(0);
 	setPlantPowerProd(0);
 
 }
@@ -21,6 +21,9 @@ PowerPlant::~PowerPlant() {
 
 void PowerPlant::setPlantExpense(int x) {
 	expense = x;
+}
+void PowerPlant::setPowerPlantQty(int x){
+	quantity = x;
 }
 
 int PowerPlant::getPlantExpense() {
@@ -47,8 +50,8 @@ void PowerPlant::setPlantClass(string typeOfPlant) {
 	type = typeOfPlant;
 }
 
-string PowerPlant::getPlantClass() {
+string PowerPlant::getPlantClass(){
 	return type;
 }
 
-} /* namespace jjsPowerGrid */
+//} /* namespace jjsPowerGrid */

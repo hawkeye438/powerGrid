@@ -10,11 +10,17 @@
 namespace jjsPowerGrid {
 
 Cities::Cities() {
-	setQuantity(0);
+	setCitiesQty();
 }
 
 Cities::~Cities() {
 	// TODO Auto-generated destructor stub
+}
+void Cities::setCitiesQty(int x){
+	cityQuantity = x;
+}
+void Cities::setCitiesQty(){
+	cityQuantity = 0;
 }
 
 } /* namespace jjsPowerGrid */

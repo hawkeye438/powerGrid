@@ -14,7 +14,7 @@ namespace jjsPowerGrid {
 int main() {
 
 	string name = "JohnDoe";
-	unsigned int colorChoice;
+	unsigned int colorChoice = 0;
 	string colors[] = { "red", "yellow", "green", "blue", "purple", "black" };
 	bool validColor = false;
 	int numberOfPlayers = 0;
@@ -53,14 +53,14 @@ int main() {
 			while(validColor == false);
 
 
-		Player *player = new Player(name, colors[colorChoice]);
+		Player *player = new Player(name, colorChoice);
 		players[j] = *player;
 
 	}
 
 	cout << "\n\nThe list of players are: " << endl;
 	for (unsigned int i = 0; i < players.size(); i++) {
-		cout <<players[i].playerInfo()<<endl;
+		cout<<players[i].playerInfo()<<endl;
 
 	}
 

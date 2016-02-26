@@ -7,11 +7,11 @@
 #include <iostream>
 #include "PlayerAssets.h"
 
-namespace jjsPowerGrid {
+using namespace jjsPowerGrid;
 
-PlayerAssets::PlayerAssets(string color) {
-	setQuantity(0);
-	playersHouses.setHouseColor(color);
+PlayerAssets::PlayerAssets(){
+	setHousesQty(0);
+	setHouseColor(color);
 }
 
 PlayerAssets::~PlayerAssets() {
@@ -22,21 +22,19 @@ int PlayerAssets::getQuantity() {
 	return this->quantityOfItem;
 }
 
-void PlayerAssets::setQuantity(int x) {
-	this->quantityOfItem = x;
+void PowerPlant::setPowerPlantQty(int x) {
+	quantity = x;
 }
 
-void PlayerAssets::addQuantity(int x) {
-	quantityOfItem += x;
-}
+
 
 void PlayerAssets::reduceQuantity(int x) {
 	quantityOfItem -= x;
 }
 
 string PlayerAssets::assetInfo(){
-	return "Cities: "+playersCities.getQuantity()+", Houses: "+playersHouses.getQuantity()
-			+", Money: "+playersMoney.getQuantity();
+	return "Cities: "+getQuantity()+", Houses: "+getQuantity()
+			+", Money: "+getQuantity();
 }
 
-} /* namespace jjsPowerGrid */
+/* namespace jjsPowerGrid */

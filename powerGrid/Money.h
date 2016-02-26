@@ -12,12 +12,10 @@
 
 namespace jjsPowerGrid {
 
-class Money: public PlayerAssets {
-
+class Money{
 public:
 	Money();
-	virtual ~Money();
-
+	~Money();
 };
 
 } /* namespace jjsPowerGrid */

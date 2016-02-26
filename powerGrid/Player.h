@@ -8,7 +8,7 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 #include <iostream>
-#include "PlayerAssets.h"
+#include "NaturalRessources.h"
 using namespace std;
 
 namespace jjsPowerGrid {
@@ -16,10 +16,11 @@ namespace jjsPowerGrid {
 class Player{
 private:
 	string playerName;
-	PlayerAssets ressources;
+	NaturalRessources ressources;
 	string playerColor;
 public:
 	Player(string playerName, string playerColor);
+	Player();
 	virtual ~Player();
 
 	void setPlayerName(string name);
